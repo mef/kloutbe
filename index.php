@@ -102,6 +102,7 @@ while ($user = mysql_fetch_assoc($query)) {
 		<tr<?php if ($key%2 == 0) echo ' class="even"' ?>>
 			<td class="pos"><strong><?php echo $user['pos'] ?></strong></td>
 			<td class="name"><a href="http://twitter.com/<?php echo $user['twitter_screen_name'] ?>" target="_blank"><?php echo $user['twitter_screen_name'] ?></a></td>
+			<td class="kClass"><strong><?php echo $user['kclass'] ?></strong></td>
 			<td class="score"><strong><?php echo ($user['kscore'] != -1) ? number_format($user['kscore'], 2) : 'N/A' ?></strong></td>
 			<td class="change"><strong><?php echo (($user['kchange'] < 0) ? '&#9660;' : (($user['kchange'] == 0) ? '-' : '&#9650;')); ?></strong></td>
 			<td class="force"><a href="force.php?u=<?php echo $user['twitter_screen_name'] ?>"><img src="_img/refresh.gif" /></a></td>
