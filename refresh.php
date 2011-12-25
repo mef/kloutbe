@@ -47,7 +47,7 @@ foreach ($usernames as $username) {
 		$score = $results[$username];
 		
 		// Calculate the change if the score changed
-		if(!empty($old_score) && $result['kscore'] != $old_score) {
+		if(!empty($old_score) && $score != $old_score) {
 			// Calculate the different between the old and the new score
 			$change = $score - $old_score;
 		}
